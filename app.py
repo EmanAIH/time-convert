@@ -16,17 +16,19 @@ def timeConversion(s):
     # Write your code here
     string_new =  s[:-2].split(":")
     time = s[-2:]
-    if (time == "AM"):
+    if time == "AM":
         if(string_new[0]=="12"):
-            string_new[0] == "00"
+            string_new[0] = "00"
+            
+
     else:
         if string_new[0] !="12":
-             string_new[0] =  str(int(string_new[0])+12)
+            string_new[0]= str(int(string_new[0])+12)
     
     return ":".join(string_new)
     
 
-print(timeConversion("04:05:45PM"))
+print(timeConversion("12:05:45AM"))
 
         
         
